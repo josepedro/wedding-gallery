@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+  <h3>Upload Photos</h3>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Photo</th>
+        <th>Uploaded at</th>
+        <th>Size</th>
+        {% if user.is_authenticated %}
+          <th>Approve/Disapprove</th>       
+        {% endif %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for photo in photos %}
+        <tr>
+          <td><img src="{{ photo.upload.url }}"></td>
+          <td>{{ photo.uploaded_at }}</td>
+          <td>{{ photo.upload.size|filesizeformat }}</td>
+          {% if user.is_authenticated %}
+            <td>
+              <input type="button" id="id_status_{{ photo.id }}" value="{{ photo.status }}" onclick="toggle{{ photo.id }}(this);">
+              {% block javascript %}
+                <script>
+                 function toggle{{ photo.id }}(button)
+                  {
+                    console.log( "{{ photo.status }}" );
+                    var photo_id = "{{ photo.id }}";
+                    var approveStatus = "Approve";
+                    var disapproveStatus = "Disapprove";
+                    var status{{ photo.id }} = document.getElementById("id_status_{{ photo.id }}").value;
+
+                    if(status{{ photo.id }} == approveStatus){
+
+                      $.ajax({
+                        url: '/change_status_photo/',
+                        data: {
+                          'photo_id': photo_id,
+                          'photo_status': "Disapprove"
+                        },
+                        dataType: 'json',
+                        success: function () {
+                          alert("Photo was update with success.");                          
+                          document.getElementById("id_status_{{ photo.id }}").value = disapproveStatus;
+                        },
+                        error: function() {
+                          alert("Photo status update with error.");
+                        }
+                      });
+
+                      
+                   }
+
+                    else if(status{{ photo.id }} == disapproveStatus){
+                    
+                     $.ajax({
+                        url: '/change_status_photo/',
+                        data: {
+                          'photo_id': photo_id,
+                          'photo_status': "Approve"
+                        },
+                        dataType: 'json',
+                        success: function () {
+                          alert("Photo was update with success.");                          
+                          document.getElementById("id_status_{{ photo.id }}").value = approveStatus;
+                        },
+                        error: function() {
+                          alert("Photo status update with error.");
+                        }
+                      });
+
+                   }
+                  }
+                </script>
+              {% endblock %}
+            </td>
+            </label>       
+          {% endif %}
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="3">No photos.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
