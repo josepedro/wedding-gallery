@@ -60,5 +60,6 @@ Also, you can see this application deployed at:
 
 ## Using Wedding Gallery Application
 
+![Home Screen](images_demo/visitor_home.png)
 
 
