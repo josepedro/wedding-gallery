@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/wedding-gallery
     docker:
-      - image: circleci/2.7.15-jessie-node-browsers
+      - image: circleci/python:2.7.15-jessie-node-browsers
     steps:
       - checkout
       - run: sudo chown -R circleci:circleci /usr/local/bin
