@@ -8,11 +8,6 @@ from urlparse import urlparse
 class WeddingGalleryTests(TestCase):
 
     def setUp(self):
-    	#uploaded_at
-		#upload
-		#status
-		#likes
-
         Photo.objects.create(
         	upload=os.path.basename(urlparse("https://sibtc-assets1.s3.amazonaws.com/media/pp.jpeg").path), 
         	status="Approve", likes=10)
