@@ -63,7 +63,8 @@ Also, you can see this application deployed at:
 ### Home Screen as Visitor
 
 As visitor, you will see only photos that were approved by site's owner login (groom and bride access). 
-You can upload images but you have to wait groom or bride to approve.
+You can upload images but you have to wait groom or bride to approve. 
+As well, you can sort photos by like's number or date's upload by pressing "Upload at Sort by" or "Likes Sort by".
 
 ![Home Screen](images_demo/visitor_home.png)
 
