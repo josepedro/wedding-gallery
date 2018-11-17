@@ -106,17 +106,17 @@ weddinggallery/core/
 
 The architectural pattern of Django is MTV like:
 
-- Model: here we have all models declared in ```models.py```. The principal model is Photo that have the following attributes: 
+* Model: here we have all models declared in ```models.py```. The principal model is Photo that have the following attributes: 
 
-- ```uploaded_at``` -> Date of upload automatically generated; 
+	* ```uploaded_at``` -> Date of upload automatically generated; 
 
-- ```upload``` -> ```FileField``` that references url on S3;
+	* ```upload``` -> ```FileField``` that references url on S3;
 
-- ```status``` -> ```String``` Approve or Disapprove;
+	* ```status``` -> ```String``` Approve or Disapprove;
 
-- ```likes``` -> ```Integer``` with number of likes.
+	* ```likes``` -> ```Integer``` with number of likes.
 
-- Views: here we have all functions to controll the application (can be seen as controller); 
+* Views: here we have all functions to controll the application (can be seen as controller); 
 
-- Templates: here we have all HTMLs to render.  
+* Templates: here we have all HTMLs to render.  
 
