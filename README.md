@@ -2,15 +2,15 @@
 
 This problem can be composed by following User Stories:
 
-- US 1: As site's owner, I want to allow my friends uploading photos because I want to see and store these photos; Acceptance Criteria: site's owner have to see a list of photos. **[DONE]**
+- **US 1**: As site's owner, I want to allow my friends uploading photos because I want to see and store these photos; Acceptance Criteria: site's owner have to see a list of photos. **[DONE]**
 
-- US 2: As site's owner, I want to controll the visibility of photos because I want to show seletected photos; Acceptance Criteria: site's owner have to approve and disapprove photos and site's visitors will see only approved photos. **[DONE]**
+- **US 2**: As site's owner, I want to controll the visibility of photos because I want to show seletected photos; Acceptance Criteria: site's owner have to approve and disapprove photos and site's visitors will see only approved photos. **[DONE]**
 
-- US 3: As site's owner, I want to permit visitors to like photos because I want to see the more liked photos; Acceptance Criteria: visitors have to see the number of "likes" on each photo on gallery. **[DONE]**
+- **US 3**: As site's owner, I want to permit visitors to like photos because I want to see the more liked photos; Acceptance Criteria: visitors have to see the number of "likes" on each photo on gallery. **[DONE]**
 
-- US 4: As visitor, I want to sort photos by total of likes because I want to see the most liked photos as initials elements; Acceptance Criteria: visitors have to see a list of sorted photos by total of likes, the top element will be with more likes. **[DONE]**
+- **US 4**: As visitor, I want to sort photos by total of likes because I want to see the most liked photos as initials elements; Acceptance Criteria: visitors have to see a list of sorted photos by total of likes, the top element will be with more likes. **[DONE]**
 
-- US 5: As visitor, I want to sort photos by date of upload because I want to see the most novels photos as initials elements; Acceptance Criteria: visitors have to see a list of sorted photos by date of upload, the top element will be with more new. **[DONE]**
+- **US 5**: As visitor, I want to sort photos by date of upload because I want to see the most novels photos as initials elements; Acceptance Criteria: visitors have to see a list of sorted photos by date of upload, the top element will be with more new. **[DONE]**
 
 ## Development Mode
 
@@ -128,7 +128,7 @@ With [vegeta](https://github.com/tsenart/vegeta) tool we can test the performanc
 
 * Total of requests in 4 seconds: 200 requests
 
-* Mean Latencies: 5.020514026 seconds
+* Latencies per request: 5.020514026 seconds
 
 * Total Bytes In: 1470000
 
@@ -138,7 +138,7 @@ Other results with more access:
 
 * Total of requests in 2 minutes: 5000 requests
 
-* Mean Latencies: 22.411604699s seconds
+* Latencies per request: 22.411604699s seconds
 
 * Total Bytes In: 16368450
 
