@@ -4,7 +4,7 @@ This problem can be composed by following User Stories:
 
 - US 1: As site's owner, I want to allow my friends uploading photos because I want to see and store these photos; Acceptance Criteria: site's owner have to see a list of photos. [DONE]
 
-- US 2: As site's owner, I want to controll the visibility of photos because I want to show seletected photos; Acceptance Criteria: site's owner have to approve and disapprove photos and site's visitors will see only approved photos. [DOING]
+- US 2: As site's owner, I want to controll the visibility of photos because I want to show seletected photos; Acceptance Criteria: site's owner have to approve and disapprove photos and site's visitors will see only approved photos. [DONE]
 
 - US 3: As site's owner, I want to permit visitors to like photos because I want to see the more liked photos; Acceptance Criteria: visitors have to see the number of "likes" on each photo on gallery. [TO DO]
 
