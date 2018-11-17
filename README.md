@@ -44,3 +44,21 @@ CircleCi was apllied in this project too.
 
 ## Deploy
 
+First you have to install docker by following this link if you use ubuntu:
+
+- https://docs.docker.com/install/linux/docker-ce/ubuntu
+
+After to deploy:
+
+- docker run -d -p 80:8000 -it josepedro/weddinggallery
+
+The app will start a server on port 80. 
+
+Also, you can see this application deployed at:
+
+- http://ec2-18-234-37-217.compute-1.amazonaws.com
+
+## Using Wedding Gallery Application
+
+
+
