@@ -19,12 +19,10 @@ def like_photo(request):
         photo.save()
 
         LOGGER.info('Photo like was update with success.')
-
         return JsonResponse(status=200, data={'status': True, 'number_likes': photo.likes})
 
     except Photo.DoesNotExist as exception:
         LOGGER.exception('Failed due %s', exception)
-
         return JsonResponse(status=404)
 
 def change_status_photo(request):
@@ -32,18 +30,16 @@ def change_status_photo(request):
     photo_status = request.GET.get('photo_status')
 
     try:
-		photo = Photo.objects.get(id = photo_id)
-		photo.status = photo_status
-		photo.save()
+        photo = Photo.objects.get(id = photo_id)
+        photo.status = photo_status
+        photo.save()
 
-		LOGGER.info('Photo was update with success.')
-
-		return JsonResponse(status=200, data={'status': True})
+        LOGGER.info('Photo was update with success.')
+        return JsonResponse(status=200, data={'status': True})
 
     except Photo.DoesNotExist as exception:
-		LOGGER.exception('Failed due %s', exception)
-
-		return JsonResponse(status=404)
+        LOGGER.exception('Failed due %s', exception)
+        return JsonResponse(status=404)
 
 class PhotoCreateView(CreateView):
     model = Photo

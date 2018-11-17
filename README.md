@@ -11,3 +11,36 @@ This problem can be composed by following User Stories:
 - US 4: As visitor, I want to sort photos by total of likes because I want to see the most liked photos as initials elements; Acceptance Criteria: visitors have to see a list of sorted photos by total of likes, the top element will be with more likes. [DONE]
 
 - US 5: As visitor, I want to sort photos by date of upload because I want to see the most novels photos as initials elements; Acceptance Criteria: visitors have to see a list of sorted photos by date of upload, the top element will be with more new. [DONE]
+
+## Development Mode
+
+We have to do following steps to developer mode:
+
+- git clone https://github.com/josepedro/wedding-gallery.git && cd wedding-gallery
+
+- pip install virtualenv
+
+- virtualenv . -p /usr/bin/python2.7
+
+- source bin/activate
+
+- pip install -r requirements.txt
+
+- python manage.py makemigrations
+
+- python manage.py migrate
+
+- python manage.py collectstatic
+
+- python manage.py runserver
+
+## Tests
+
+All acceptance criterias are covered by tests in weddingggallery/core/tests.py module and can be run by using:
+
+python manage.py test weddinggallery
+
+CircleCi was apllied in this project too.
+
+## Deploy
+
