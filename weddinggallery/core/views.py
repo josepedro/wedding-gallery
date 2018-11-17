@@ -10,10 +10,6 @@ import logging
 
 LOGGER = logging.getLogger(__name__)
 
-
-def sort_like(request):
-    print('testaaaaaaaando mone delicia')
-
 def like_photo(request):
     
     photo_id = request.GET.get('photo_id')
