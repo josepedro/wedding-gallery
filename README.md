@@ -38,7 +38,7 @@ We have to do following steps to developer mode:
 
 All acceptance criterias are covered by tests in weddingggallery/core/tests.py module and can be run by using:
 
-python manage.py test weddinggallery
+- python manage.py test weddinggallery
 
 CircleCi was apllied in this project too.
 
