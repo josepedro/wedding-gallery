@@ -60,6 +60,11 @@ Also, you can see this application deployed at:
 
 ## Using Wedding Gallery Application
 
+### Home Screen as Visitor
+
+As visitor, you will see only photos that were approved by site's owner login (groom and bride access). 
+You can upload images but you have to wait groom or bride to approve.
+
 ![Home Screen](images_demo/visitor_home.png)
 
 
