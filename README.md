@@ -74,6 +74,7 @@ Feel free to like photos ;)
 If you are groom or bride, you can login as owner with Username and Password like:
 
 - Username: owner
+
 - Password: owner  
 
 ![Owner Login](images_demo/login_screen.png)
@@ -85,7 +86,37 @@ In this case, the photo of Linus is disapprove. But, if groom or bride likes Lin
 
 ![Owner Login](images_demo/home_screen_owner.png)
 
+## Project's Design
 
+This project is based on [Django](https://www.djangoproject.com/). For more informations about dependencies, we can see [requirements.txt](https://raw.githubusercontent.com/josepedro/wedding-gallery/master/requirements.txt) file.
 
+There is main structure of Django App: 
 
+```bash
+weddinggallery/core/
+├── admin.py
+├── apps.py
+├── __init__.py
+├── migrations
+├── models.py
+├── templates
+├── tests.py
+└── views.py
+```
+
+The architectural pattern of Django is MTV like:
+
+- Model: here we have all models declared in ```models.py```. The principal model is Photo that have the following attributes: 
+
+- ```uploaded_at``` -> Date of upload automatically generated; 
+
+- ```upload``` -> ```FileField``` that references url on S3;
+
+- ```status``` -> ```String``` Approve or Disapprove;
+
+- ```likes``` -> ```Integer``` with number of likes.
+
+- Views: here we have all functions to controll the application (can be seen as controller); 
+
+- Templates: here we have all HTMLs to render.  
 
