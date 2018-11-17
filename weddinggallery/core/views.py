@@ -11,7 +11,6 @@ import logging
 LOGGER = logging.getLogger(__name__)
 
 def like_photo(request):
-    
     photo_id = request.GET.get('photo_id')
 
     try:
@@ -29,7 +28,6 @@ def like_photo(request):
         return JsonResponse(status=404)
 
 def change_status_photo(request):
-    
     photo_id = request.GET.get('photo_id')
     photo_status = request.GET.get('photo_status')
 
