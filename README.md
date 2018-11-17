@@ -110,7 +110,7 @@ The architectural pattern of Django is MTV like:
 
 	* ```uploaded_at``` -> Date of upload automatically generated; 
 
-	* ```upload``` -> ```FileField``` that references url on S3;
+	* ```upload``` -> ```FileField``` object that references url on S3;
 
 	* ```status``` -> ```String``` Approve or Disapprove;
 
