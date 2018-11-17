@@ -108,6 +108,8 @@ The architectural pattern of Django is MTV like:
 
 * Model: here we have all models declared in ```models.py```. The principal model is Photo that have the following attributes: 
 
+	* ```id``` -> Primary key; 
+
 	* ```uploaded_at``` -> Date of upload automatically generated; 
 
 	* ```upload``` -> ```FileField``` object that references url on S3;
@@ -119,4 +121,26 @@ The architectural pattern of Django is MTV like:
 * Views: here we have all functions to controll the application (can be seen as controller); 
 
 * Templates: here we have all HTMLs to render.  
+
+## Performance Test
+
+With [vegeta](https://github.com/tsenart/vegeta) tool we can test the performance of Wedding Gallery. Next we can see some results:
+
+* Total of requests in 4 seconds: 200 requests
+
+* Mean Latencies: 5.020514026 seconds
+
+* Total Bytes In: 1470000
+
+* Success Ratio: 100.00%
+
+Other results with more access:
+
+* Total of requests in 2 minutes: 5000 requests
+
+* Mean Latencies: 22.411604699s seconds
+
+* Total Bytes In: 16368450
+
+* Success Ratio: 44.54%
 
