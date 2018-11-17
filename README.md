@@ -1,4 +1,4 @@
-# Wedding Gallery
+# Wedding Gallery [![CircleCI](https://circleci.com/gh/josepedro/wedding-gallery/tree/master.svg?style=svg)](https://circleci.com/gh/josepedro/wedding-gallery/tree/master)
 
 This problem can be composed by following User Stories:
 
