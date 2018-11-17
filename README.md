@@ -65,7 +65,27 @@ Also, you can see this application deployed at:
 As visitor, you will see only photos that were approved by site's owner login (groom and bride access). 
 You can upload images but you have to wait groom or bride to approve. 
 As well, you can sort photos by like's number or date's upload by pressing "Upload at Sort by" or "Likes Sort by".
+Feel free to like photos ;)
 
 ![Home Screen](images_demo/visitor_home.png)
+
+### Owner Login
+
+If you are groom or bride, you can login as owner with Username and Password like:
+
+- Username: owner
+- Password: owner  
+
+![Owner Login](images_demo/login_screen.png)
+
+### Home Screen as Owner
+
+As Owner, you will buttons to approve or disapprove photos.
+In this case, the photo of Linus is disapprove. But, if groom or bride likes Linus, they can approve this photo.  
+
+![Owner Login](images_demo/home_screen_owner.png)
+
+
+
 
 
