@@ -14,9 +14,9 @@
     <thead>
       <tr>
         <th>Photo</th>
-        <th>Uploaded at</th>
+        <th>Uploaded at <a href="{% url 'sort_upload' %}"> Sort by </a></th>
         <th>Size</th>
-        <th>Likes</th>
+        <th>Likes <a href="{% url 'sort_like' %}"> Sort by </a></th>
         {% if user.is_authenticated %}
           <th>Approve/Disapprove</th>       
         {% endif %}

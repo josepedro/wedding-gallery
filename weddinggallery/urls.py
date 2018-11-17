@@ -13,5 +13,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^change_status_photo/$', views.change_status_photo, name='change_status_photo'),
     url(r'^like_photo/$', views.like_photo, name='like_photo'),
+    url(r'^sort_like/$', views.PhotoSortedByLikesView.as_view(), name='sort_like'),
+    url(r'^sort_upload/$', views.PhotoSortedByUploadView.as_view(), name='sort_upload'),
     url(r'^$', views.PhotoCreateView.as_view(), name='home'),
 ]

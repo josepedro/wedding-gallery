@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView
+from django.views.generic import TemplateView
 from django.urls import reverse_lazy
 from django.http import JsonResponse
 
@@ -8,6 +9,10 @@ from .models import Photo
 import logging
 
 LOGGER = logging.getLogger(__name__)
+
+
+def sort_like(request):
+    print('testaaaaaaaando mone delicia')
 
 def like_photo(request):
     
@@ -57,6 +62,22 @@ class PhotoCreateView(CreateView):
         context['photos'] = photos
         return context
 
+class PhotoSortedByLikesView(TemplateView):
+    template_name = "core/photo_form.html"
 
+    def get_context_data(self, **kwargs):
+        context = super(PhotoSortedByLikesView, self).get_context_data(**kwargs)
+        photos = Photo.objects.all()
+        context['photos'] = sorted(photos, key=lambda t: t.likes, reverse=True)
+        return context
+
+class PhotoSortedByUploadView(TemplateView):
+    template_name = "core/photo_form.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(PhotoSortedByUploadView, self).get_context_data(**kwargs)
+        photos = Photo.objects.all()
+        context['photos'] = sorted(photos, key=lambda t: t.uploaded_at, reverse=True)
+        return context
 
     
