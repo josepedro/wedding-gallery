@@ -9,6 +9,24 @@ import logging
 
 LOGGER = logging.getLogger(__name__)
 
+def like_photo(request):
+    
+    photo_id = request.GET.get('photo_id')
+
+    try:
+        photo = Photo.objects.get(id = photo_id)
+        photo.likes += 1
+        photo.save()
+
+        LOGGER.info('Photo like was update with success.')
+
+        return JsonResponse(status=200, data={'status': True, 'number_likes': photo.likes})
+
+    except Photo.DoesNotExist as exception:
+        LOGGER.exception('Failed due %s', exception)
+
+        return JsonResponse(status=404)
+
 def change_status_photo(request):
     
     photo_id = request.GET.get('photo_id')
@@ -27,7 +45,6 @@ def change_status_photo(request):
 		LOGGER.exception('Failed due %s', exception)
 
 		return JsonResponse(status=404)
-
 
 class PhotoCreateView(CreateView):
     model = Photo

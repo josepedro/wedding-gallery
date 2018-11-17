@@ -16,6 +16,7 @@
         <th>Photo</th>
         <th>Uploaded at</th>
         <th>Size</th>
+        <th>Likes</th>
         {% if user.is_authenticated %}
           <th>Approve/Disapprove</th>       
         {% endif %}
@@ -31,6 +32,28 @@
             <td><img src="{{ photo.upload.url }}"></td>
             <td>{{ photo.uploaded_at }}</td>
             <td>{{ photo.upload.size|filesizeformat }}</td>
+
+            <td> 
+              <a id="id_number_likes_{{ photo.id }}">{{ photo.likes }} </a> 
+              <input type="button" id="id_like_{{ photo.id }}" value="Like ;)" onclick="toggleLike{{ photo.id }}(this);"> </td>
+                <script>
+                  function toggleLike{{ photo.id }}(button) {
+                     $.ajax({
+                          url: '/like_photo/',
+                          data: {
+                            'photo_id': "{{ photo.id }}"
+                          },
+                          dataType: 'json',
+                          success: function (data) {                         
+                            document.getElementById("id_number_likes_{{ photo.id }}").innerHTML = data.number_likes;
+                          },
+                          error: function() {
+                            alert("Like with error.");
+                          }
+                    });
+                  }
+
+                </script>
               <td>
                 <input type="button" id="id_status_{{ photo.id }}" value="{{ photo.status }}" onclick="toggle{{ photo.id }}(this);">
                 {% block javascript %}
@@ -95,13 +118,33 @@
             <tr>
             <td><img src="{{ photo.upload.url }}"></td>
             <td>{{ photo.uploaded_at }}</td>
-            <td>{{ photo.upload.size|filesizeformat }}</td> 
+            <td>{{ photo.upload.size|filesizeformat }}</td>
+            <td> 
+              <a id="id_number_likes_{{ photo.id }}">{{ photo.likes }} </a> 
+              <input type="button" id="id_like_{{ photo.id }}" value="Like ;)" onclick="toggleLike{{ photo.id }}(this);"> </td>
+                <script>
+                  function toggleLike{{ photo.id }}(button) {
+                     $.ajax({
+                          url: '/like_photo/',
+                          data: {
+                            'photo_id': "{{ photo.id }}"
+                          },
+                          dataType: 'json',
+                          success: function (data) {                         
+                            document.getElementById("id_number_likes_{{ photo.id }}").innerHTML = data.number_likes;
+                          },
+                          error: function() {
+                            alert("Like with error.");
+                          }
+                    });
+                  }
+
+                </script>
+              <td>
             </tr>
           {% endif %}
 
         {% endif %}
-
-
 
       {% empty %}
         <tr>
