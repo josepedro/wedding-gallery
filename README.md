@@ -4,13 +4,17 @@ This problem can be composed by following User Stories:
 
 - **US 1**: As site's owner, I want to allow my friends uploading photos because I want to see and store these photos; Acceptance Criteria: site's owner have to see a list of photos. **[DONE]**
 
-- **US 2**: As site's owner, I want to controll the visibility of photos because I want to show seletected photos; Acceptance Criteria: site's owner have to approve and disapprove photos and site's visitors will see only approved photos. **[DONE]**
+- **US 2**: As site's owner, I want to controll the visibility of photos because I want to show seletected photos; 
+Acceptance Criteria: site's owner have to approve and disapprove photos and site's visitors will see only approved photos. **[DONE]**
 
-- **US 3**: As site's owner, I want to permit visitors to like photos because I want to see the more liked photos; Acceptance Criteria: visitors have to see the number of "likes" on each photo on gallery. **[DONE]**
+- **US 3**: As site's owner, I want to permit visitors to like photos because I want to see the more liked photos; 
+Acceptance Criteria: visitors have to see the number of "likes" on each photo on gallery. **[DONE]**
 
-- **US 4**: As visitor, I want to sort photos by total of likes because I want to see the most liked photos as initials elements; Acceptance Criteria: visitors have to see a list of sorted photos by total of likes, the top element will be with more likes. **[DONE]**
+- **US 4**: As visitor, I want to sort photos by total of likes because I want to see the most liked photos as initials elements; 
+Acceptance Criteria: visitors have to see a list of sorted photos by total of likes, the top element will be with more likes. **[DONE]**
 
-- **US 5**: As visitor, I want to sort photos by date of upload because I want to see the most novels photos as initials elements; Acceptance Criteria: visitors have to see a list of sorted photos by date of upload, the top element will be with more new. **[DONE]**
+- **US 5**: As visitor, I want to sort photos by date of upload because I want to see the most novels photos as initials elements; 
+Acceptance Criteria: visitors have to see a list of sorted photos by date of upload, the top element will be with more new. **[DONE]**
 
 ## Development Mode
 
@@ -40,7 +44,7 @@ All acceptance criterias are covered by tests in weddingggallery/core/tests.py m
 
 - ```python manage.py test weddinggallery```
 
-CircleCi was apllied in this project too.
+In order to achieve the high quality standards for the production environment, CircleCi was apllied.
 
 ## Deploy
 
@@ -88,9 +92,9 @@ In this case, the photo of Linus is disapprove. But, if groom or bride likes Lin
 
 ## Project's Design
 
-This project is based on [Django](https://www.djangoproject.com/). For more informations about dependencies, we can see [requirements.txt](https://raw.githubusercontent.com/josepedro/wedding-gallery/master/requirements.txt) file.
+This project is based on [Django](https://www.djangoproject.com/). For more informations about dependencies, you can see [requirements.txt](https://raw.githubusercontent.com/josepedro/wedding-gallery/master/requirements.txt) file.
 
-There is main structure of Django App: 
+The main structure of Django App is: 
 
 ```bash
 weddinggallery/core/
