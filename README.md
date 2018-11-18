@@ -128,7 +128,7 @@ The architectural pattern of Django is MTV like:
 
 ## Performance Test
 
-With [vegeta](https://github.com/tsenart/vegeta) tool we can test the performance of Wedding Gallery. Next we can see some results:
+With [vegeta](https://github.com/tsenart/vegeta) tool we can test the performance of Wedding Gallery by sending GET requests on root of http://ec2-18-234-37-217.compute-1.amazonaws.com. Next we can see some results:
 
 * Total of requests in 4 seconds: 200 requests
 
